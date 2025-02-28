@@ -1,0 +1,202 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   margin: 0;
+   padding: 20px;
+   min-height: 100vh;
+   /* background-color: #df1f2d; */
+   background-image: url("images/bg.jpg");
+   background-size: cover;
+   background-position: center;
+   font-family: "Open Sans", sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ 
+ .flip-card {
+   margin: 20px;
+   position: relative;
+   transform-style: preserve-3d;
+   perspective: 1000px;
+   background: rgba( 255, 255, 255, 0.25 );
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 4px );
+   -webkit-backdrop-filter: blur( 4px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+ }
+ 
+ .flip-card-front,
+ .flip-card-back {
+   width: 380px;
+   min-height: 600px;
+   height: auto;
+   background-color: #000000;
+   background-size: cover;
+   background-position: center;
+   text-align: center;
+   backface-visibility: hidden;
+   transform-style: preserve-3d;
+   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+ }
+
+ #one {
+   background-image:  url("images/image.png");
+ }
+
+ #two {
+  background-image:  url("images/image.png");
+}
+
+#three {
+  background-image:  url("images/image.png");
+}
+
+#four {
+  background-image:  url("images/image.png");
+}
+
+#five {
+  background-image:  url("images/image.png");
+}
+
+#six {
+  background-image:  url("images/image.png");
+}
+ 
+ /* .flip-card:nth-of-type(2) .flip-card-front,
+ .flip-card:nth-of-type(2) .flip-card-back {
+   background-image: url(https://wallpapercave.com/wp/wp5049551.jpg);
+ }
+ 
+ .flip-card:nth-of-type(3) .flip-card-front,
+ .flip-card:nth-of-type(3) .flip-card-back {
+   background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
+ } */
+ 
+ .flip-card-front {
+   transform: rotateY(0deg);
+   opacity: 0.91;
+ }
+ 
+ .flip-card-back {
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: rotateY(180deg);
+ }
+ 
+ .flip-card-front::after,
+ .flip-card-back::after {
+   content: "";
+   width: 100%;
+   height: 100%;
+   background-color: #0a0a0a;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+ }
+ 
+ .flip-card-front .inner,
+ .flip-card-back .inner {
+   width: 100%;
+   padding: 40px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%) translateZ(60px) scale(0.94);
+   z-index: 2;
+ }
+ 
+ .inner .icon {
+   width: 180px;
+   height: 200px;
+   margin-bottom: 20px;
+ }
+ 
+ .inner h3 {
+   margin-bottom: 8px;
+   color: #ffffff;
+   font-size: 30px;
+   font-weight: 700;
+   line-height: 40px;
+   text-transform: capitalize;
+ }
+ 
+ .inner p {
+   color: #ffffff;
+   font-size: 16px;
+   line-height: 28px;
+ }
+ 
+ /* .flip-card:hover .flip-card-front {
+   transform: rotateY(-180deg);
+ }
+ 
+ .flip-card:hover .flip-card-back {
+   transform: rotateY(0deg);
+ }
+  */
+ .flip-card.flipped .flip-card-front {
+   transform: rotateY(-180deg);
+ }
+ 
+ .flip-card.flipped .flip-card-back {
+   transform: rotateY(0deg);
+ }
+
+ footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* #btn {
+  background-color: #ffffff;
+  color: #df1f2d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#btn:hover {
+  background-color: #df1f2d;
+  color: white;
+} */
+
+.pushable {
+  background: hsl(340deg 100% 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  /* font-size: 1.25rem; */
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+ 
+ 
