@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".flip-card");
   const btn = document.querySelector("#btn");
 
-  // Flip functionality on click
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       card.classList.toggle("flipped");
@@ -41,10 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return randombg;
     }
 
-    // Re-flip all cards to close before shuffling images
     cards.forEach(card => card.classList.remove("flipped"));
 
-    // Assign new images
     backCards.forEach(backCard => {
       backCard.style.backgroundImage = `url('${getRandomImage()}')`;
     });
