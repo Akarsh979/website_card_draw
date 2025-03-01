@@ -20,7 +20,8 @@
  }
  
  .flip-card {
-   margin: 20px;
+   margin: 5px;
+   margin-top: 20%;
    position: relative;
    transform-style: preserve-3d;
    perspective: 1000px;
@@ -34,8 +35,9 @@
  
  .flip-card-front,
  .flip-card-back {
-   width: 380px;
-   min-height: 600px;
+
+   width: 190px;
+   min-height: 300px;
    height: auto;
    background-color: #000000;
    background-size: cover;
@@ -115,11 +117,10 @@
  }
  
  .inner .icon {
-   width: 180px;
-   height: 200px;
+   width: 90px;
+   height: 100px;
    margin-bottom: 20px;
  }
- 
  .inner h3 {
    margin-bottom: 8px;
    color: #ffffff;
