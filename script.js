@@ -69,9 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 const changeBG = () => {
   backCards.forEach((backCard) => {
-    backCard.style.backgroundImage = `url('${
-      images[Math.floor(Math.random() * images.length)]
-    }')`;
+    backCard.style.backgroundImage = `url('${images[(Math.floor(Math.random() * images.length)%images.length)]}')`;    
   });
 };
 
