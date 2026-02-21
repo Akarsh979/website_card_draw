@@ -9,19 +9,22 @@
    padding: 20px;
    min-height: 100vh;
    /* background-color: #df1f2d; */
-   background-image: url("images/bg.jpg");
+   background-image: url("images/bg.png");
    background-size: cover;
    background-position: center;
    font-family: "Open Sans", sans-serif;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* when wrapped to multiple lines, center the rows vertically */
+  align-content: center;
  }
  
  .flip-card {
    margin: 5px;
-   margin-top: 20%;
+  /* remove forced top offset so flex centering can work */
+  margin-top: 0;
    position: relative;
    transform-style: preserve-3d;
    perspective: 1000px;
@@ -117,7 +120,7 @@
  }
  
  .inner .icon {
-   width: 90px;
+   width: 120px;
    height: 100px;
    margin-bottom: 20px;
  }
